@@ -1,0 +1,65 @@
+# U.S. County Health Indicators Dashboard
+
+## Overview
+
+This project uses CDC PLACES county-level data to explore geographic variation in selected health indicators across the United States. I developed an interactive Power BI dashboard that allows users to filter results by state and county, compare key health measures, and explore relationships between health behaviors and outcomes.
+
+The dashboard uses age-adjusted prevalence estimates from the CDC PLACES 2025 release to support more meaningful comparisons between counties with different age distributions.
+
+## Dashboard
+
+The dashboard includes:
+
+- Interactive state and county filters
+- Summary indicators for obesity, diabetes, smoking, and physical inactivity
+- A county-level map of obesity prevalence
+- A ranked view of the ten counties with the highest obesity prevalence within the selected geography
+- A scatterplot examining the relationship between physical inactivity and obesity prevalence
+- Interactive tooltips and cross-filtering between visuals
+
+## Data Preparation
+
+The original CDC PLACES dataset contains more than 160 fields covering approximately 3,100 U.S. counties.
+
+Using Power Query, I selected and prepared the fields needed for the dashboard, including:
+
+- State and county identifiers
+- Total and adult population
+- Obesity prevalence
+- Diabetes prevalence
+- Smoking prevalence
+- Physical inactivity prevalence
+- Depression prevalence
+- Frequent mental distress
+- Frequent physical distress
+- Lack of health insurance
+
+Age-adjusted prevalence estimates were used for the health measures. Data types and geographic identifiers were reviewed during preparation, and missing prevalence estimates were retained rather than imputed.
+
+## Dashboard Development
+
+The dashboard was developed in Power BI Desktop using Power Query for data preparation and transformation.
+
+Visualizations include KPI cards, ranked bar charts, scatterplots with trend analysis, and an Azure Maps county-level choropleth. Geographic fields were organized using a state-to-county hierarchy to improve county-level mapping accuracy.
+
+## Example Analysis
+
+The dashboard can be used to examine differences in health indicators across counties and identify patterns between measures. For example, the county-level scatterplot shows a positive association between physical inactivity and obesity prevalence within the selected geography.
+
+This relationship is descriptive and should not be interpreted as evidence that physical inactivity causes differences in county obesity prevalence.
+
+## Limitations
+
+CDC PLACES estimates are model-based small-area estimates rather than direct measurements of every individual within a county. County-level relationships are ecological and should not be interpreted as individual-level associations or causal effects.
+
+Some health measures contain unavailable or suppressed estimates. These values were retained as missing rather than replaced or imputed.
+
+## Tools
+
+- Power BI Desktop
+- Power Query
+- Azure Maps
+
+## Data Source
+
+Centers for Disease Control and Prevention (CDC), PLACES: Local Data for Better Health, 2025 release.
